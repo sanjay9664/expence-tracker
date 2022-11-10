@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        width: 30%;
+        height: 300px;
+        border: 2px solid red;
+        text-align: center;
+
+        padding-top: 20px;
+        margin: auto;
+      }
+
+      #expence {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Expence tracker</h1>
+    <div class="container">
+      <form id="form" onsubmit="store(event)">
+        <label>Choose expenseamount</label><br />
+        <input type="number" placeholder="choose expense amount" id="num" />
+        <br /><br />
+        <label>Choose describtion</label><br />
+        <input
+          type="text"
+          placeholder="Enter describtion"
+          id="des"
+        /><br /><br />
+        <label>Choose category</label><br />
+        <select id="data">
+          <option value="fuel">fuel</option>
+          <option value="food">food</option>
+          <option value="electricity">electricity</option>
+          <option value="movie">movie</option></select
+        ><br /><br />
+
+        <button>Add expenses</button>
+      </form>
+    </div>
+
+    <div id="expence"></div>
+  </body>
+</html>
+<script src="./component/index.js"></script>
